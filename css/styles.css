@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+}
+
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* this is the parallax effect */
+    perspective: 10px;
+}
+
+header{ 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background, .foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.background{
+    transform: translateZ(-10px) scale(2); 
+    /* needs to be opposite to the perspective */
+}
+
+/* .foreground{
+    transform: translate(-10px) scale(0.6);
+} */
+
+header h1{
+    font-size: 6rem;
+    color: white;
+    text-shadow: 0 0 5px grey;
+}
+
+.info {
+    font-size: 1.5rem;
+    padding: 2rem;
+    background-color: #333;
+    color: white;
+  }
+
+
